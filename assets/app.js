@@ -141,7 +141,7 @@ function calculateDate(e) {
     }
     
     if(birthDate > today){
-        errorDay.textContent = 'Must be in the past';
+        errorYear.textContent = 'Must be in the past';
         resetResults();
         return;
     }
