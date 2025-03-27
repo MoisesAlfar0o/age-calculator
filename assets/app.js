@@ -136,9 +136,7 @@ function calculateDate(e) {
         return;
     }
 
-   if(dayValue && monthValue && yearValue){
-        getDate(dayValue, monthValue, yearValue)
-   }
+    getDate(dayValue, monthValue, yearValue)
 }
 
 form.addEventListener('submit', calculateDate);
