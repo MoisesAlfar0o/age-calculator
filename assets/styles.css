@@ -169,7 +169,7 @@ hr{
     height: 100%;
     line-height: 1.1;
     font-size: 80px;
-   margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .container__result p{
@@ -181,7 +181,7 @@ hr{
 
 .container__result span{
     color: var(--text-color-purple);
-    letter-spacing: 3px;
+    letter-spacing: 10px;
 }
 
 
