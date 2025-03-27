@@ -47,7 +47,8 @@ function validateYear(year) {
         errorYear.textContent = 'Must be >= 1900'; // Show error message
         return false;
     }
-    if (year => currentYear) {
+    if (year >= currentYear) {
+        console.log(currentYear)
         errorYear.textContent = 'Must be in the past'; // Show error message if future year
         return false;
     }
