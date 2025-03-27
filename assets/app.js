@@ -72,6 +72,7 @@ function getDate(dayValue, monthValue, yearValue){
 
     // Calculate age
     const today = new Date(); // Get today's date
+    console.log(today)
     const birthDate = new Date(year, month - 1, day); // Create a Date object for the birthdate
     
     let years = today.getFullYear() - birthDate.getFullYear(); // Calculate years
@@ -106,6 +107,9 @@ function calculateDate(e) {
     const monthValue = monthInput.value.trim(); // Get month input value and trim any extra spaces
     const yearValue = yearInput.value.trim(); // Get year input value and trim any extra spaces
 
+    const today = new Date(); // Get today's date
+    const birthDate = new Date(yearValue, monthValue - 1, dayValue);
+
     // Validate day input
     if (!dayValue) {
         errorDay.textContent = 'This field is required'; // Show error if empty
@@ -135,8 +139,15 @@ function calculateDate(e) {
         resetResults();
         return;
     }
-
+    
+    if(birthDate > today){
+        errorDay.textContent = 'Must be in the past';
+        resetResults();
+        return;
+    }
+    
     getDate(dayValue, monthValue, yearValue)
+
 }
 
 form.addEventListener('submit', calculateDate);
