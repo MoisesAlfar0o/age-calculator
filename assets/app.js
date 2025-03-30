@@ -27,6 +27,7 @@ function validateDay(day) {
         return false;
     }
     errorDay.textContent = ''; // Clear error message if valid
+    dayInput.style.border = '';
     return true;
 }
 
@@ -37,6 +38,7 @@ function validateMonth(month) {
         return false;
     }
     errorMonth.textContent = ''; // Clear error message if valid
+    monthInput.style.border = '';
     return true;
 }
 
@@ -52,6 +54,7 @@ function validateYear(year) {
         return false;
     }
     errorYear.textContent = ''; // Clear error message if valid
+    yearInput.style.border = '';
     return true;
 }
 
@@ -113,6 +116,7 @@ function calculateDate(e) {
     // Validate day input
     if (!dayValue) {
         errorDay.textContent = 'This field is required'; // Show error if empty
+        dayInput.style.border = "1px solid red"
         isValid = false;
     } else if (!validateDay(Number(dayValue))) { // Validate if day is valid
         isValid = false;
@@ -121,6 +125,7 @@ function calculateDate(e) {
     // Validate month input
     if (!monthValue) {
         errorMonth.textContent = 'This field is required'; // Show error if empty
+        monthInput.style.border = "1px solid red"
         isValid = false;
     } else if (!validateMonth(Number(monthValue))) { // Validate if month is valid
         isValid = false;
@@ -129,6 +134,7 @@ function calculateDate(e) {
     // Validate year input
     if (!yearValue) {
         errorYear.textContent = 'This field is required'; // Show error if empty
+        yearInput.style.border = "1px solid red"
         isValid = false;
     } else if (!validateYear(Number(yearValue))) { // Validate if year is valid
         isValid = false;

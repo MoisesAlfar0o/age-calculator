@@ -105,6 +105,7 @@ body{
     color: var(--text-color-red);
 }
 
+
 .container__inputs label{
     color: var(--text-color-smokey);
     font-size: 12px;
@@ -125,6 +126,7 @@ body{
     transition: all ease-out 0.4s;
     cursor: pointer;
 }
+
 
 .container__inputs input::placeholder{
     opacity: .5;
